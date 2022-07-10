@@ -24,7 +24,7 @@ body {
     margin: 25px;
     height: 250px;
     width: 250px;
-    background-image: URL("/music_player/images/headphone.jpg");
+    background-image: URL("/images/headphone.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 50%;

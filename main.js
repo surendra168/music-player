@@ -22,19 +22,19 @@ let track_list = [
     {
       name: "Autumn Day",
       artist: "Kevin MacLeod",
-      image: "/music_player/images/autumn.jpeg",
+      image: "images/autumn.jpeg",
       path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Calming/Kevin_MacLeod_-_Autumn_Day.mp3?download=1&name=Kevin%20MacLeod%20-%20Autumn%20Day.mp3"
     },
     {
       name: "Fluorescence",
       artist: "Nuisance",
-      image: "/music_player/images/fluoresence.jpeg",
+      image: "images/fluoresence.jpeg",
       path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/tracks/o2v0hAUQJmwBFSuCycYcVbxMjjaigouTkjnu14i6.mp3?download=1&name=Nuisance%20-%20Fluorescence.mp3"
     },
     {
       name: "Night",
       artist: "Serge Quadrado",
-      image: "/music_player/images/night.jpeg",
+      image: "images/night.jpeg",
       path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/tracks/9238gOa2XakvpuLam5YcaaiCIXFA6E8bstTrNEfW.mp3?download=1&name=Serge%20Quadrado%20-%20Night.mp3",
     },
   ];
