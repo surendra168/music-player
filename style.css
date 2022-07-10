@@ -1,4 +1,5 @@
 body {
+    font-family: Arial;
     background-color: lightgreen;
     transition: background-color .5s;
   }
@@ -23,11 +24,10 @@ body {
     margin: 25px;
     height: 250px;
     width: 250px;
-    background-image: URL(
-       "https://source.unsplash.com/Qrspubmx6kE/640x360");
+    background-image: URL("/music_player/images/headphone.jpg");
     background-size: cover;
     background-position: center;
-    border-radius: 15%;
+    border-radius: 50%;
   }
 
   .now-playing {
@@ -35,11 +35,11 @@ body {
   }
    
   .track-name {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
    
   .track-artist {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .buttons {

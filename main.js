@@ -20,36 +20,36 @@ let curr_track = document.createElement('audio');
 
 let track_list = [
     {
-      name: "Night Owl",
-      artist: "Broke For Free",
-      image: "https://images.pexels.com/photos/2264753/pexels-photo-2264753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-      path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
+      name: "Autumn Day",
+      artist: "Kevin MacLeod",
+      image: "/music_player/images/autumn.jpeg",
+      path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Calming/Kevin_MacLeod_-_Autumn_Day.mp3?download=1&name=Kevin%20MacLeod%20-%20Autumn%20Day.mp3"
     },
     {
-      name: "Enthusiast",
-      artist: "Tours",
-      image: "https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-      path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3"
+      name: "Fluorescence",
+      artist: "Nuisance",
+      image: "/music_player/images/fluoresence.jpeg",
+      path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/tracks/o2v0hAUQJmwBFSuCycYcVbxMjjaigouTkjnu14i6.mp3?download=1&name=Nuisance%20-%20Fluorescence.mp3"
     },
     {
-      name: "Shipping Lanes",
-      artist: "Chad Crouch",
-      image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-      path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
+      name: "Night",
+      artist: "Serge Quadrado",
+      image: "/music_player/images/night.jpeg",
+      path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/tracks/9238gOa2XakvpuLam5YcaaiCIXFA6E8bstTrNEfW.mp3?download=1&name=Serge%20Quadrado%20-%20Night.mp3",
     },
   ];
 
   function random_bg_color() {
 
-    // Get a number between 64 to 256 (for getting lighter colors)
+    
     let red = Math.floor(Math.random() * 182) + 64;
     let green = Math.floor(Math.random() * 182) + 64;
     let blue = Math.floor(Math.random() * 182) + 64;
   
-    // Construct a color withe the given values
+    
     let bgColor = `rgb(${red},${green},${blue})`;
   
-    // Set the background to that color
+    
     document.body.style.background = bgColor;
   }
 
@@ -58,11 +58,10 @@ let track_list = [
     resetValues();
     curr_track.src = track_list[track_index].path;
     curr_track.load();
-  
-    track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+    track_art.style.backgroundImage = `url(${track_list[track_index].image})`;
     track_name.textContent = track_list[track_index].name;
     track_artist.textContent = track_list[track_index].artist;
-    now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+    now_playing.innerHTML = `PLAYING <b>${track_index + 1}</b> OF <b>${track_list.length}</b>`;
   
     updateTimer = setInterval(seekUpdate, 1000);
     curr_track.addEventListener("ended", nextTrack);
